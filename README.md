@@ -2,25 +2,33 @@
 
 Nettside for Rootwell-produktet.
 
-## Se siden lokalt
+## Lagrede lenker
+
+| Hva | Lenke |
+|-----|-------|
+| **Prosjektmappe (Mac)** | `~/rootwell` |
+| **GitHub-repo** | https://github.com/zascha-glitch/rootwell.url |
+| **Nettside (når publisert)** | https://zascha-glitch.github.io/rootwell.url/ |
+| **GitHub Pages-innstillinger** | https://github.com/zascha-glitch/rootwell.url/settings/pages |
+
+Nettside-lenken er **reservert** til repoet ditt. Når du slår på GitHub Pages igjen, får du samme adresse tilbake.
+
+## Se siden lokalt (privat)
 
 ```bash
 cd ~/rootwell
 python3 -m http.server 8080
 ```
 
-Åpne http://localhost:8080 i nettleseren.
+Åpne http://localhost:8080 i nettleseren. Kun du ser den.
 
-## Publiser på GitHub (gratis nettside)
+## Publiser igjen når du er klar
 
-1. Gå til https://github.com/zascha-glitch/rootwell.url
-2. Klikk **Add file** → **Upload files**
-3. Dra inn alle filer og mappen `images/`
-4. Klikk **Commit changes**
-5. Gå til **Settings** → **Pages**
-6. Under **Branch**, velg `main` og `/ (root)` → **Save**
+1. Gå til https://github.com/zascha-glitch/rootwell.url/settings/pages
+2. Under **Branch**, velg `main` og **/ (root)**
+3. Klikk **Save**
 
-Nettsiden blir tilgjengelig på:
+Etter 1–2 minutter er siden live på:
 **https://zascha-glitch.github.io/rootwell.url/**
 
 ## Filer
