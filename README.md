@@ -1,28 +1,31 @@
-# Rootwell
+# Rootwell — 4-i-1 Wellness Herbal Diffusion Pen
 
-A modern, light-themed landing page for Rootwell — a professional services offering.
+Nettside for Rootwell-produktet.
 
-## Preview locally
-
-Open `index.html` in your browser, or run a simple server:
+## Se siden lokalt
 
 ```bash
+cd ~/rootwell
 python3 -m http.server 8080
 ```
 
-Then visit [http://localhost:8080](http://localhost:8080).
+Åpne http://localhost:8080 i nettleseren.
 
-## Customize
+## Publiser på GitHub (gratis nettside)
 
-- **Branding** — Update the "Rootwell" name in `index.html` (logo and footer)
-- **Copy** — Edit headlines, services, and about text in `index.html`
-- **Colors** — Change CSS variables at the top of `styles.css`
-- **Contact form** — Wire up the form in `script.js` to your email service (Formspree, Netlify Forms, etc.)
+1. Gå til https://github.com/zascha-glitch/rootwell.url
+2. Klikk **Add file** → **Upload files**
+3. Dra inn alle filer og mappen `images/`
+4. Klikk **Commit changes**
+5. Gå til **Settings** → **Pages**
+6. Under **Branch**, velg `main` og `/ (root)` → **Save**
 
-## Structure
+Nettsiden blir tilgjengelig på:
+**https://zascha-glitch.github.io/rootwell.url/**
 
-```
-index.html   — Page content and sections
-styles.css   — Layout and visual design
-script.js    — Mobile menu and form handling
-```
+## Filer
+
+- `index.html` — nettsiden
+- `styles.css` — design
+- `script.js` — meny og skjema
+- `images/product.png` — produktbilde

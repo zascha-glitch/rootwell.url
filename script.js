@@ -18,7 +18,7 @@ document.querySelector(".contact-form")?.addEventListener("submit", (e) => {
   e.preventDefault();
   const btn = e.target.querySelector('button[type="submit"]');
   const original = btn.textContent;
-  btn.textContent = "Message sent!";
+  btn.textContent = "Melding sendt!";
   btn.disabled = true;
   e.target.reset();
   setTimeout(() => {
