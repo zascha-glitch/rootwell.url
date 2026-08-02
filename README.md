@@ -20,7 +20,20 @@ cd ~/rootwell
 python3 -m http.server 8080
 ```
 
-Åpne http://localhost:8080 i nettleseren. Kun du ser den.
+Åpne http://localhost:8080 i nettleseren.
+
+## Slik mottar du bestillinger (Formspree)
+
+1. Gå til https://formspree.io og opprett gratis konto
+2. Lag et nytt skjema og kopier URL-en (f.eks. `https://formspree.io/f/abcxyzab`)
+3. Lim inn URL-en i `script.js` på linjen `FORMSPREE_ENDPOINT`
+4. Last opp oppdaterte filer til GitHub
+
+Da får du e-post hver gang noen sender bestillingsskjemaet.
+
+## Endre pris
+
+Prisen står to steder i `index.html` — søk etter `349` og oppdater.
 
 ## Publiser igjen når du er klar
 
@@ -28,12 +41,10 @@ python3 -m http.server 8080
 2. Under **Branch**, velg `main` og **/ (root)**
 3. Klikk **Save**
 
-Etter 1–2 minutter er siden live på:
-**https://zascha-glitch.github.io/rootwell.url/**
-
 ## Filer
 
 - `index.html` — nettsiden
 - `styles.css` — design
-- `script.js` — meny og skjema
-- `images/product.png` — produktbilde
+- `script.js` — meny og bestillingsskjema
+- `favicon.svg` — ikon i nettleserfanen
+- `images/product.jpg` — produktbilde (optimert)

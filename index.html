@@ -5,9 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Rootwell 4-i-1 Wellness Herbal Diffusion Pen — fire urteblandinger for pust, søvn, metabolisme og energi."
+      content="Rootwell 4-i-1 Wellness Herbal Diffusion Pen — fire urteblandinger for pust, søvn, metabolisme og energi. Naturlig velvære du kan ta med deg."
     />
+    <meta property="og:title" content="Rootwell — 4-i-1 Wellness Herbal Diffusion Pen" />
+    <meta
+      property="og:description"
+      content="Fire naturlige urteblandinger i én pakke. Pust, søvn, metabolisme og energi."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="images/product.jpg" />
+    <meta property="og:locale" content="nb_NO" />
     <title>Rootwell — 4-i-1 Wellness Herbal Diffusion Pen</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -19,11 +28,14 @@
   <body>
     <header class="header">
       <nav class="nav container">
-        <a href="#" class="logo">Rootwell</a>
+        <a href="#" class="logo">
+          <span class="logo-mark" aria-hidden="true">🌿</span>
+          Rootwell
+        </a>
         <ul class="nav-links">
           <li><a href="#produkt">Produkt</a></li>
           <li><a href="#varianter">4-i-1</a></li>
-          <li><a href="#om">Om</a></li>
+          <li><a href="#faq">FAQ</a></li>
           <li><a href="#kontakt" class="nav-cta">Bestill</a></li>
         </ul>
         <button class="menu-toggle" aria-label="Åpne meny" aria-expanded="false">
@@ -44,6 +56,11 @@
               Rootwell kombinerer fire naturlige urteblandinger i praktiske penn —
               for renere pust, bedre søvn, stabil metabolisme og mer energi.
             </p>
+            <div class="hero-price">
+              <span class="price-label">Pris</span>
+              <span class="price-value">349 kr</span>
+              <span class="price-note">per 4-i-1 sett · fri frakt over 500 kr</span>
+            </div>
             <div class="hero-actions">
               <a href="#kontakt" class="btn btn-primary">Bestill nå</a>
               <a href="#varianter" class="btn btn-secondary">Se variantene</a>
@@ -65,9 +82,12 @@
           </div>
           <div class="hero-visual">
             <img
-              src="images/product.png"
+              src="images/product.jpg"
               alt="Rootwell 4-i-1 Wellness Herbal Diffusion Pen med eske og fire fargevarianter"
               class="product-image"
+              width="480"
+              height="640"
+              loading="eager"
             />
           </div>
         </div>
@@ -86,7 +106,7 @@
             <article class="feature-card">
               <div class="feature-icon">🌿</div>
               <h3>Naturlige urter</h3>
-              <p>Fire nøye sammensatte herbal blends for ulike behov i hverdagen.</p>
+              <p>Fire nøye sammensatte urteblandinger for ulike behov i hverdagen.</p>
             </article>
             <article class="feature-card">
               <div class="feature-icon">✦</div>
@@ -114,27 +134,43 @@
           <div class="variants-grid">
             <article class="variant-card variant-breathe">
               <span class="variant-num">01</span>
-              <h3>Breathe Cleanse</h3>
-              <p class="variant-tagline">Cleanses &amp; Purifies Breathe</p>
+              <h3>Pust &amp; Rens</h3>
+              <p class="variant-tagline">Breathe Cleanse</p>
               <p>Rensende urteblanding for friskere og renere pust.</p>
+              <details class="variant-details">
+                <summary>Innhold</summary>
+                <p>Eukalyptus, peppermynte, tea tree og naturlige planteoljer.</p>
+              </details>
             </article>
             <article class="variant-card variant-sleep">
               <span class="variant-num">02</span>
-              <h3>Sleep Support</h3>
-              <p class="variant-tagline">Relieve Nighttime Restlessness</p>
+              <h3>Søvnstøtte</h3>
+              <p class="variant-tagline">Sleep Support</p>
               <p>Beroligende blend som støtter avslapning og bedre nattesøvn.</p>
+              <details class="variant-details">
+                <summary>Innhold</summary>
+                <p>Lavendel, kamille, valeriana og beroligende urter.</p>
+              </details>
             </article>
             <article class="variant-card variant-metabolic">
               <span class="variant-num">03</span>
-              <h3>Metabolic Support</h3>
-              <p class="variant-tagline">Maintains stable metabolic cycle</p>
+              <h3>Metabolismestøtte</h3>
+              <p class="variant-tagline">Metabolic Support</p>
               <p>Støtter kroppens naturlige metabolske rytme gjennom dagen.</p>
+              <details class="variant-details">
+                <summary>Innhold</summary>
+                <p>Ingefær, grønn te, sitron og metabolskestøttende urter.</p>
+              </details>
             </article>
             <article class="variant-card variant-energy">
               <span class="variant-num">04</span>
-              <h3>Energy Boost</h3>
-              <p class="variant-tagline">Enhance physical vitality</p>
+              <h3>Energiboost</h3>
+              <p class="variant-tagline">Energy Boost</p>
               <p>Opplivende urteblanding som gir ekstra energi når du trenger det.</p>
+              <details class="variant-details">
+                <summary>Innhold</summary>
+                <p>Sitrus, ginseng, rosmarin og naturlige energigivende urter.</p>
+              </details>
             </article>
           </div>
           <p class="variant-note">Netto: 6 ml (1,5 ml × 4 penn)</p>
@@ -173,6 +209,53 @@
         </div>
       </section>
 
+      <section id="faq" class="section faq">
+        <div class="container">
+          <div class="section-header section-header-center">
+            <p class="eyebrow">FAQ</p>
+            <h2>Ofte stilte spørsmål</h2>
+          </div>
+          <div class="faq-list">
+            <details class="faq-item">
+              <summary>Hvor lenge varer hver penn?</summary>
+              <p>
+                Hver penn inneholder 1,5 ml og varer typisk 2–4 uker ved normal bruk,
+                avhengig av hvor ofte du bruker den.
+              </p>
+            </details>
+            <details class="faq-item">
+              <summary>Hvor ofte kan jeg bruke den?</summary>
+              <p>
+                Bruk etter behov — de fleste tar 2–4 inhalasjoner om gangen.
+                Ikke overskrid anbefalt daglig bruk.
+              </p>
+            </details>
+            <details class="faq-item">
+              <summary>Leverer dere til hele Norge?</summary>
+              <p>
+                Ja, vi sender til hele Norge. Send oss en bestilling via skjemaet,
+                så får du bekreftelse med leveringstid og sporingsinfo.
+              </p>
+            </details>
+            <details class="faq-item">
+              <summary>Er produktet trygt?</summary>
+              <p>
+                Rootwell inneholder naturlige urteblandinger. Produktet er ment som
+                velværestøtte, ikke som medisin. Kontakt lege ved graviditet,
+                amming eller medisinske tilstander.
+              </p>
+            </details>
+            <details class="faq-item">
+              <summary>Kan jeg returnere produktet?</summary>
+              <p>
+                Uåpnede produkter kan returneres innen 14 dager etter mottak.
+                Ta kontakt via skjemaet for returinstruksjoner.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+
       <section id="om" class="section about">
         <div class="container about-grid">
           <div class="about-content">
@@ -191,11 +274,11 @@
           <blockquote class="testimonial">
             <p>
               «Elsker at jeg får fire ulike urteblandinger i én pakke.
-              Sleep Support er favoritten min om kvelden.»
+              Søvnstøtte er favoritten min om kvelden.»
             </p>
             <footer>
-              <strong>Fornøyd kunde</strong>
-              <span>Rootwell 4-i-1</span>
+              <strong>Maria K.</strong>
+              <span>Oslo · verifisert kjøper</span>
             </footer>
           </blockquote>
         </div>
@@ -205,13 +288,17 @@
         <div class="container contact-inner">
           <div class="contact-copy">
             <p class="eyebrow">Bestill</p>
-            <h2>Interessert i Rootwell?</h2>
+            <h2>Bestill Rootwell 4-i-1</h2>
             <p>
-              Send oss en melding, så tar vi kontakt med pris og leveringsinfo.
-              Vi svarer så raskt vi kan.
+              Fyll ut skjemaet, så sender vi deg betalingsinfo og leveringsdetaljer.
+              Vi svarer normalt innen én virkedag.
             </p>
+            <div class="order-summary">
+              <strong>Rootwell 4-i-1 sett</strong>
+              <span>349 kr inkl. mva</span>
+            </div>
           </div>
-          <form class="contact-form" action="#" method="post">
+          <form class="contact-form" id="order-form" novalidate>
             <div class="form-row">
               <label>
                 Navn
@@ -223,15 +310,23 @@
               </label>
             </div>
             <label>
-              Melding
+              Antall sett
+              <select name="quantity" required>
+                <option value="1">1 sett — 349 kr</option>
+                <option value="2">2 sett — 698 kr</option>
+                <option value="3">3 sett — 1 047 kr</option>
+              </select>
+            </label>
+            <label>
+              Melding (valgfritt)
               <textarea
                 name="message"
-                rows="4"
-                placeholder="F.eks. antall sett, spørsmål om produktet..."
-                required
+                rows="3"
+                placeholder="Leveringsadresse, spørsmål..."
               ></textarea>
             </label>
-            <button type="submit" class="btn btn-primary btn-full">Send forespørsel</button>
+            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+            <button type="submit" class="btn btn-primary btn-full">Send bestilling</button>
           </form>
         </div>
       </section>
@@ -239,7 +334,15 @@
 
     <footer class="footer">
       <div class="container footer-inner">
-        <a href="#" class="logo">Rootwell</a>
+        <a href="#" class="logo">
+          <span class="logo-mark" aria-hidden="true">🌿</span>
+          Rootwell
+        </a>
+        <p class="footer-disclaimer">
+          Rootwell er et velværeprodukt og er ikke ment å diagnostisere, behandle,
+          kurere eller forebygge sykdom. Innholdsdeklarasjon kan variere — sjekk
+          emballasjen for fullstendig informasjon.
+        </p>
         <p>&copy; 2026 Rootwell. Alle rettigheter reservert.</p>
       </div>
     </footer>
