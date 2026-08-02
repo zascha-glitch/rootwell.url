@@ -1,6 +1,6 @@
 // Sett inn din Formspree-ID etter registrering på https://formspree.io
 // Eksempel: "https://formspree.io/f/abcxyzab"
-const FORMSPREE_ENDPOINT = "";
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/xvzeezwe";
 
 const nav = document.querySelector(".nav");
 const menuToggle = document.querySelector(".menu-toggle");
