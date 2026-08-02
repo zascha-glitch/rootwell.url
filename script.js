@@ -20,6 +20,13 @@ navLinks.forEach((link) => {
 
 const form = document.getElementById("order-form");
 const formStatus = document.getElementById("form-status");
+const dealSelect = document.getElementById("deal-select");
+
+document.querySelectorAll(".deal-card .btn").forEach((btn, index) => {
+  btn.addEventListener("click", () => {
+    if (dealSelect) dealSelect.value = String(index + 1);
+  });
+});
 
 form?.addEventListener("submit", async (e) => {
   e.preventDefault();

@@ -26,6 +26,12 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <div class="promo-bar">
+      <div class="container promo-inner">
+        <span class="promo-tag">🔥 Lanseringstilbud</span>
+        <span>Kun <strong>249 kr</strong> — spar 100 kr · Gratis frakt på 2+ sett</span>
+      </div>
+    </div>
     <header class="header">
       <nav class="nav container">
         <a href="#" class="logo">
@@ -34,6 +40,7 @@
         </a>
         <ul class="nav-links">
           <li><a href="#produkt">Produkt</a></li>
+          <li><a href="#tilbud">Tilbud</a></li>
           <li><a href="#varianter">4-i-1</a></li>
           <li><a href="#faq">FAQ</a></li>
           <li><a href="#kontakt" class="btn btn-nav">Bestill</a></li>
@@ -62,13 +69,14 @@
               for renere pust, bedre søvn, stabil metabolisme og mer energi.
             </p>
             <div class="hero-price">
-              <span class="price-label">Pris</span>
-              <span class="price-value">299 kr</span>
-              <span class="price-note">per 4-i-1 sett · fri frakt over 500 kr</span>
+              <span class="price-old">349 kr</span>
+              <span class="price-value">249 kr</span>
+              <span class="price-badge">Spar 100 kr</span>
+              <span class="price-note">per 4-i-1 sett · gratis frakt ved 2+ sett</span>
             </div>
             <div class="hero-actions">
               <a href="#kontakt" class="btn btn-primary">Bestill nå</a>
-              <a href="#varianter" class="btn btn-secondary">Se variantene</a>
+              <a href="#tilbud" class="btn btn-secondary">Se tilbud</a>
             </div>
             <div class="hero-stats">
               <div class="stat">
@@ -124,6 +132,63 @@
               <div class="feature-icon">→</div>
               <h3>Enkel å bruke</h3>
               <p>Kompakt diffusion pen du kan ha med overalt, når du trenger det.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="tilbud" class="section deals">
+        <div class="container">
+          <div class="section-header section-header-center">
+            <p class="eyebrow">Tilbud</p>
+            <h2>Jo mer du kjøper, <span class="gradient-text">jo mer sparer du</span></h2>
+            <p class="section-lead">Lanseringstilbud — begrenset periode.</p>
+          </div>
+          <div class="deals-grid">
+            <article class="deal-card">
+              <span class="deal-label">Starter</span>
+              <h3>1 sett</h3>
+              <div class="deal-price">
+                <span class="deal-old">349 kr</span>
+                <span class="deal-now">249 kr</span>
+              </div>
+              <p>Perfekt for å teste alle fire blends.</p>
+              <ul class="deal-perks">
+                <li>Alle 4 varianter inkludert</li>
+                <li>Frakt 49 kr</li>
+              </ul>
+              <a href="#kontakt" class="btn btn-secondary btn-full">Velg 1 sett</a>
+            </article>
+            <article class="deal-card deal-featured">
+              <span class="deal-popular">Mest populær</span>
+              <span class="deal-label">Duo</span>
+              <h3>2 sett</h3>
+              <div class="deal-price">
+                <span class="deal-old">698 kr</span>
+                <span class="deal-now">449 kr</span>
+              </div>
+              <p>Spar 99 kr + gratis frakt.</p>
+              <ul class="deal-perks">
+                <li>8 urteblandinger totalt</li>
+                <li>Gratis frakt</li>
+                <li>Perfekt å dele</li>
+              </ul>
+              <a href="#kontakt" class="btn btn-primary btn-full">Velg 2 sett</a>
+            </article>
+            <article class="deal-card">
+              <span class="deal-label deal-best">Best verdi</span>
+              <h3>3 sett</h3>
+              <div class="deal-price">
+                <span class="deal-old">1 047 kr</span>
+                <span class="deal-now">629 kr</span>
+              </div>
+              <p>Spar 418 kr + gratis frakt.</p>
+              <ul class="deal-perks">
+                <li>12 urteblandinger totalt</li>
+                <li>Gratis frakt</li>
+                <li>Beste pris per sett</li>
+              </ul>
+              <a href="#kontakt" class="btn btn-secondary btn-full">Velg 3 sett</a>
             </article>
           </div>
         </div>
@@ -302,7 +367,7 @@
             </p>
             <div class="order-summary">
               <strong>Rootwell 4-i-1 sett</strong>
-              <span>299 kr inkl. mva</span>
+              <span>fra 249 kr</span>
             </div>
           </div>
           <form class="contact-form" id="order-form" novalidate>
@@ -317,11 +382,11 @@
               </label>
             </div>
             <label>
-              Antall sett
-              <select name="quantity" required>
-                <option value="1">1 sett — 299 kr</option>
-                <option value="2">2 sett — 598 kr</option>
-                <option value="3">3 sett — 897 kr</option>
+              Velg tilbud
+              <select name="quantity" id="deal-select" required>
+                <option value="1">1 sett — 249 kr (+ 49 kr frakt)</option>
+                <option value="2" selected>2 sett — 449 kr (gratis frakt) ★</option>
+                <option value="3">3 sett — 629 kr (gratis frakt)</option>
               </select>
             </label>
             <label>

@@ -33,7 +33,7 @@ Da får du e-post hver gang noen sender bestillingsskjemaet.
 
 ## Endre pris
 
-Prisen står to steder i `index.html` — søk etter `299` og oppdater.
+Prisen og tilbudene står i `index.html` — søk etter `249` for å oppdatere.
 
 ## Publiser igjen når du er klar
 
