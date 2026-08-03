@@ -1,5 +1,3 @@
-// Sett inn din Formspree-ID etter registrering på https://formspree.io
-// Eksempel: "https://formspree.io/f/abcxyzab"
 const FORMSPREE_ENDPOINT = "https://formspree.io/f/xvzeezwe";
 
 const nav = document.querySelector(".nav");
@@ -22,9 +20,9 @@ const form = document.getElementById("order-form");
 const formStatus = document.getElementById("form-status");
 const dealSelect = document.getElementById("deal-select");
 
-document.querySelectorAll(".deal-card .btn").forEach((btn, index) => {
+document.querySelectorAll("[data-deal]").forEach((btn) => {
   btn.addEventListener("click", () => {
-    if (dealSelect) dealSelect.value = String(index + 1);
+    if (dealSelect) dealSelect.value = btn.dataset.deal;
   });
 });
 
@@ -57,9 +55,10 @@ form?.addEventListener("submit", async (e) => {
 
     if (response.ok) {
       formStatus.textContent =
-        "Takk! Bestillingen er sendt. Vi tar kontakt snart med betalingsinfo.";
+        "Takk! Bestillingen er sendt. Vi tar kontakt snart med Vipps og leveringsinfo.";
       formStatus.className = "form-status success";
       form.reset();
+      if (dealSelect) dealSelect.value = "2";
     } else {
       throw new Error("Send feilet");
     }
@@ -72,3 +71,23 @@ form?.addEventListener("submit", async (e) => {
     btn.disabled = false;
   }
 });
+
+const revealEls = document.querySelectorAll(".reveal");
+
+if ("IntersectionObserver" in window && revealEls.length) {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+  );
+
+  revealEls.forEach((el) => observer.observe(el));
+} else {
+  revealEls.forEach((el) => el.classList.add("visible"));
+}
