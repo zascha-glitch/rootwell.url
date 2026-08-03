@@ -55,7 +55,7 @@ form?.addEventListener("submit", async (e) => {
 
     if (response.ok) {
       formStatus.textContent =
-        "Takk! Bestillingen er sendt. Vi tar kontakt snart med Vipps og leveringsinfo.";
+        "Takk! Bestillingen er sendt. Husk Vipps til 97 10 58 79 hvis du ikke har betalt ennå.";
       formStatus.className = "form-status success";
       form.reset();
       if (dealSelect) dealSelect.value = "2";

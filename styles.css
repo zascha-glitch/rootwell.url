@@ -591,6 +591,52 @@ img {
   background: var(--surface);
 }
 
+.vipps-box {
+  max-width: 28rem;
+  margin: 0 auto 2.5rem;
+  padding: 1.5rem 1.75rem;
+  text-align: center;
+  background: linear-gradient(160deg, #fff7ed 0%, #ffffff 70%);
+  border: 1px solid rgba(217, 119, 6, 0.25);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+}
+
+.vipps-box-compact {
+  margin: 0 0 1.25rem;
+  max-width: none;
+  text-align: left;
+  padding: 1.1rem 1.25rem;
+}
+
+.vipps-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #c2410c;
+  margin-bottom: 0.35rem;
+}
+
+.vipps-number {
+  font-family: var(--display);
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--text);
+  margin-bottom: 0.35rem;
+}
+
+.vipps-box-compact .vipps-number {
+  font-size: 1.75rem;
+  margin-bottom: 0;
+}
+
+.vipps-hint {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
 .order-steps {
   list-style: none;
   display: grid;
