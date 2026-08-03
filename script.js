@@ -4,16 +4,27 @@ const nav = document.querySelector(".nav");
 const menuToggle = document.querySelector(".menu-toggle");
 const navLinks = document.querySelectorAll(".nav-links a");
 
+const setMenuOpen = (isOpen) => {
+  nav.classList.toggle("open", isOpen);
+  document.body.classList.toggle("menu-open", isOpen);
+  menuToggle?.setAttribute("aria-expanded", String(isOpen));
+  menuToggle?.setAttribute("aria-label", isOpen ? "Lukk meny" : "Åpne meny");
+};
+
 menuToggle?.addEventListener("click", () => {
-  const isOpen = nav.classList.toggle("open");
-  menuToggle.setAttribute("aria-expanded", String(isOpen));
+  setMenuOpen(!nav.classList.contains("open"));
 });
 
 navLinks.forEach((link) => {
   link.addEventListener("click", () => {
-    nav.classList.remove("open");
-    menuToggle?.setAttribute("aria-expanded", "false");
+    setMenuOpen(false);
   });
+});
+
+window.addEventListener("resize", () => {
+  if (window.innerWidth > 640 && nav.classList.contains("open")) {
+    setMenuOpen(false);
+  }
 });
 
 const form = document.getElementById("order-form");
