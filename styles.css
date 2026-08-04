@@ -697,9 +697,44 @@ img {
   margin-bottom: 0;
 }
 
+.vipps-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
 .vipps-hint {
   font-size: 0.875rem;
   color: var(--text-muted);
+  margin-top: 0.65rem;
+}
+
+.btn-copy {
+  margin: 0.35rem auto 0;
+  padding: 0.55rem 1.1rem;
+  font-size: 0.8125rem;
+  background: #fff;
+  color: #c2410c;
+  border: 1px solid rgba(217, 119, 6, 0.35);
+  box-shadow: none;
+}
+
+.btn-copy:hover {
+  background: #fff7ed;
+  transform: none;
+}
+
+.btn-copy.copied {
+  background: var(--accent-soft);
+  color: var(--accent);
+  border-color: rgba(31, 122, 77, 0.3);
+}
+
+.btn-copy-compact {
+  margin: 0;
+  flex-shrink: 0;
 }
 
 .order-steps {
@@ -930,6 +965,7 @@ img {
 .order-summary {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 1rem;
   padding: 1rem 1.15rem;
   background: var(--accent-soft);
@@ -939,6 +975,15 @@ img {
 .order-summary span {
   font-weight: 700;
   color: var(--accent);
+  font-size: 1.2rem;
+  white-space: nowrap;
+}
+
+.summary-note {
+  margin-top: 0.2rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--text-muted);
 }
 
 .contact-form {
@@ -981,9 +1026,36 @@ img {
   background: #fff;
 }
 
+.contact-form input.invalid,
+.contact-form textarea.invalid,
+.contact-form select.invalid {
+  border-color: #c0392b;
+  box-shadow: 0 0 0 3px rgba(192, 57, 43, 0.12);
+}
+
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
   color: #8a9a8e;
+}
+
+.field-error {
+  min-height: 1rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #c0392b;
+}
+
+.form-price-line {
+  padding: 0.85rem 1rem;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 0.9375rem;
+  color: var(--text);
+}
+
+.form-price-line strong {
+  color: var(--accent);
 }
 
 .form-hint {
@@ -1003,6 +1075,10 @@ img {
 
 .form-status.error {
   color: #c0392b;
+}
+
+.mobile-cta {
+  display: none;
 }
 
 .footer {
@@ -1222,6 +1298,34 @@ img {
 
   .trust-row p:not(:last-child)::after {
     display: none;
+  }
+
+  .mobile-cta {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 90;
+    display: block;
+    padding: 0.75rem 1rem calc(0.75rem + env(safe-area-inset-bottom));
+    background: rgba(255, 255, 255, 0.92);
+    border-top: 1px solid var(--border);
+    box-shadow: 0 -10px 30px rgba(13, 21, 16, 0.08);
+    backdrop-filter: blur(12px);
+    transform: translateY(110%);
+    transition: transform 0.28s ease;
+  }
+
+  .mobile-cta.visible {
+    transform: translateY(0);
+  }
+
+  body.menu-open .mobile-cta {
+    transform: translateY(110%);
+  }
+
+  .footer {
+    padding-bottom: 5.5rem;
   }
 }
 
