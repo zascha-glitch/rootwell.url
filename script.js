@@ -61,6 +61,8 @@ const summaryPrice = document.getElementById("summary-price");
 const formPriceLine = document.getElementById("form-price-line");
 const mobileCta = document.getElementById("mobile-cta");
 const contactSection = document.getElementById("kontakt");
+const successCard = document.getElementById("success-card");
+const successReset = document.getElementById("success-reset");
 
 const updateDealSummary = (value = dealSelect?.value || "2") => {
   const deal = DEALS[value] || DEALS[2];
@@ -219,13 +221,15 @@ form?.addEventListener("submit", async (e) => {
     });
 
     if (response.ok) {
-      formStatus.textContent =
-        "Takk! Bestillingen er sendt. Husk Vipps til 97 10 58 79 hvis du ikke har betalt ennå.";
-      formStatus.className = "form-status success";
       form.reset();
       if (dealSelect) dealSelect.value = "2";
       updateDealSummary("2");
       clearFieldErrors();
+      formStatus.textContent = "";
+      formStatus.className = "form-status";
+      form.hidden = true;
+      successCard?.removeAttribute("hidden");
+      successCard?.scrollIntoView({ behavior: "smooth", block: "nearest" });
     } else {
       throw new Error("Send feilet");
     }
@@ -236,6 +240,15 @@ form?.addEventListener("submit", async (e) => {
   } finally {
     btn.textContent = original;
     btn.disabled = false;
+  }
+});
+
+successReset?.addEventListener("click", () => {
+  successCard?.setAttribute("hidden", "");
+  if (form) {
+    form.hidden = false;
+    formStatus.textContent = "";
+    formStatus.className = "form-status";
   }
 });
 
@@ -272,6 +285,20 @@ if (mobileCta && contactSection && "IntersectionObserver" in window) {
     { passive: true }
   );
 }
+
+const scrollTopBtn = document.getElementById("scroll-top");
+
+window.addEventListener(
+  "scroll",
+  () => {
+    scrollTopBtn?.classList.toggle("visible", window.scrollY > 500);
+  },
+  { passive: true }
+);
+
+scrollTopBtn?.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
 
 const revealEls = document.querySelectorAll(".reveal");
 

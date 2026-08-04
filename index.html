@@ -13,8 +13,16 @@
       content="Fire blends i ett sett. Naturlige urtepenner for pust, søvn, metabolisme og energi — fra 249 kr."
     />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="images/product.jpg" />
+    <meta property="og:url" content="https://zascha-glitch.github.io/rootwell.url/" />
+    <meta property="og:image" content="https://zascha-glitch.github.io/rootwell.url/images/product.jpg" />
     <meta property="og:locale" content="nb_NO" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Rootwell — 4-i-1 Wellness Herbal Diffusion Pen" />
+    <meta
+      name="twitter:description"
+      content="Fire blends i ett sett. Naturlige urtepenner for pust, søvn, metabolisme og energi — fra 249 kr."
+    />
+    <link rel="canonical" href="https://zascha-glitch.github.io/rootwell.url/" />
     <title>Rootwell — 4-i-1 Wellness Herbal Diffusion Pen</title>
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -41,6 +49,7 @@
         </a>
         <ul class="nav-links">
           <li><a href="#varianter">Blends</a></li>
+          <li><a href="#hvorfor">Hvorfor</a></li>
           <li><a href="#tilbud">Tilbud</a></li>
           <li><a href="#slik">Bestilling</a></li>
           <li><a href="#faq">Spørsmål</a></li>
@@ -104,7 +113,7 @@
             <article class="variant-card variant-breathe reveal">
               <span class="variant-num">01</span>
               <h3>Pust &amp; Rens</h3>
-              <p class="variant-tagline">Breathe Cleanse</p>
+              <p class="variant-tagline">For friskere pust</p>
               <p>Friskere pust på sekunder — ideell før møter, trening eller lange dager inne.</p>
               <details class="variant-details">
                 <summary>Innhold</summary>
@@ -114,7 +123,7 @@
             <article class="variant-card variant-sleep reveal">
               <span class="variant-num">02</span>
               <h3>Søvnstøtte</h3>
-              <p class="variant-tagline">Sleep Support</p>
+              <p class="variant-tagline">For roligere kveld</p>
               <p>Roligere kveld og lettere innsovning med en beroligende urteblanding.</p>
               <details class="variant-details">
                 <summary>Innhold</summary>
@@ -124,7 +133,7 @@
             <article class="variant-card variant-metabolic reveal">
               <span class="variant-num">03</span>
               <h3>Metabolismestøtte</h3>
-              <p class="variant-tagline">Metabolic Support</p>
+              <p class="variant-tagline">For dagens rytme</p>
               <p>Hold rytmen gjennom dagen med en blend som støtter kroppens naturlige tempo.</p>
               <details class="variant-details">
                 <summary>Innhold</summary>
@@ -134,12 +143,38 @@
             <article class="variant-card variant-energy reveal">
               <span class="variant-num">04</span>
               <h3>Energiboost</h3>
-              <p class="variant-tagline">Energy Boost</p>
+              <p class="variant-tagline">For et rent løft</p>
               <p>Et rent løft uten kaffe — når du trenger fokushet midt i dagen.</p>
               <details class="variant-details">
                 <summary>Innhold</summary>
                 <p>Sitrus, ginseng, rosmarin og naturlige energigivende urter.</p>
               </details>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="hvorfor" class="section why">
+        <div class="container">
+          <div class="section-header section-header-center">
+            <p class="eyebrow">Hvorfor Rootwell</p>
+            <h2>Enkelt velvære — uten oppstyr</h2>
+            <p class="section-lead">
+              Fire blends i én pakke. Klar til bruk når du trenger det.
+            </p>
+          </div>
+          <div class="why-grid">
+            <article class="why-card reveal">
+              <h3>Fire i én</h3>
+              <p>Pust, søvn, metabolisme og energi — uten å kjøpe fire ulike produkter.</p>
+            </article>
+            <article class="why-card reveal">
+              <h3>Diskret og portabel</h3>
+              <p>Liten penn du tar med deg. Ingen røyk, ingen gnist, ingen oppstyr.</p>
+            </article>
+            <article class="why-card reveal">
+              <h3>Enkel bestilling</h3>
+              <p>Vipps, send adresse — vi sender vanligvis innen 1–3 virkedager.</p>
             </article>
           </div>
         </div>
@@ -304,7 +339,13 @@
               <summary>Leverer dere til hele Norge?</summary>
               <p>
                 Ja. Når betalingen er mottatt, sender vi vanligvis innen 1–3 virkedager
-                med sporingsinfo.
+                med sporingsinfo til hele Norge.
+              </p>
+            </details>
+            <details class="faq-item">
+              <summary>Hva koster frakt?</summary>
+              <p>
+                1 sett: 49 kr frakt. 2 eller 3 sett: gratis frakt.
               </p>
             </details>
             <details class="faq-item">
@@ -318,6 +359,7 @@
               <summary>Kan jeg returnere?</summary>
               <p>
                 Ja. Uåpnede produkter kan returneres innen 14 dager etter mottak.
+                Ta kontakt på e-post, så avtaler vi retur.
               </p>
             </details>
           </div>
@@ -354,67 +396,81 @@
               <span id="summary-price">449 kr</span>
             </div>
           </div>
-          <form class="contact-form" id="order-form" novalidate>
-            <div class="form-row">
+          <div class="form-panel" id="form-panel">
+            <form class="contact-form" id="order-form" novalidate>
+              <div class="form-row">
+                <label>
+                  Navn
+                  <input type="text" name="name" id="field-name" placeholder="Ola Nordmann" required autocomplete="name" />
+                  <span class="field-error" data-error-for="name"></span>
+                </label>
+                <label>
+                  Telefon
+                  <input
+                    type="tel"
+                    name="phone"
+                    id="field-phone"
+                    placeholder="9X XX XX XX"
+                    required
+                    autocomplete="tel"
+                  />
+                  <span class="field-error" data-error-for="phone"></span>
+                </label>
+              </div>
               <label>
-                Navn
-                <input type="text" name="name" id="field-name" placeholder="Ola Nordmann" required autocomplete="name" />
-                <span class="field-error" data-error-for="name"></span>
-              </label>
-              <label>
-                Telefon
+                E-post
                 <input
-                  type="tel"
-                  name="phone"
-                  id="field-phone"
-                  placeholder="9X XX XX XX"
+                  type="email"
+                  name="email"
+                  id="field-email"
+                  placeholder="ola@eksempel.no"
                   required
-                  autocomplete="tel"
+                  autocomplete="email"
                 />
-                <span class="field-error" data-error-for="phone"></span>
+                <span class="field-error" data-error-for="email"></span>
               </label>
+              <label>
+                Velg tilbud
+                <select name="quantity" id="deal-select" required>
+                  <option value="1">1 sett — 249 kr (+ 49 kr frakt)</option>
+                  <option value="2" selected>2 sett — 449 kr (gratis frakt)</option>
+                  <option value="3">3 sett — 629 kr (gratis frakt)</option>
+                </select>
+                <span class="field-error" data-error-for="quantity"></span>
+              </label>
+              <label>
+                Leveringsadresse
+                <textarea
+                  name="message"
+                  id="field-message"
+                  rows="3"
+                  placeholder="Gateadresse, postnummer og sted"
+                  required
+                ></textarea>
+                <span class="field-error" data-error-for="message"></span>
+              </label>
+              <p class="form-price-line" id="form-price-line">
+                Du Vippser <strong>449 kr</strong> (gratis frakt)
+              </p>
+              <p class="form-hint">
+                Vipps til <strong>97 10 58 79</strong> først. Pakken går ut når betalingen er mottatt.
+              </p>
+              <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+              <button type="submit" class="btn btn-primary btn-full">Send bestilling</button>
+            </form>
+
+            <div class="success-card" id="success-card" hidden>
+              <p class="success-eyebrow">Bestilling mottatt</p>
+              <h3>Takk! Vi har fått bestillingen din.</h3>
+              <p>
+                Husk Vipps til <strong>97 10 58 79</strong> hvis du ikke har betalt ennå.
+                Vi sender vanligvis innen 1–3 virkedager etter betaling.
+              </p>
+              <button type="button" class="btn btn-secondary btn-full" id="success-reset">
+                Send en ny bestilling
+              </button>
             </div>
-            <label>
-              E-post
-              <input
-                type="email"
-                name="email"
-                id="field-email"
-                placeholder="ola@eksempel.no"
-                required
-                autocomplete="email"
-              />
-              <span class="field-error" data-error-for="email"></span>
-            </label>
-            <label>
-              Velg tilbud
-              <select name="quantity" id="deal-select" required>
-                <option value="1">1 sett — 249 kr (+ 49 kr frakt)</option>
-                <option value="2" selected>2 sett — 449 kr (gratis frakt)</option>
-                <option value="3">3 sett — 629 kr (gratis frakt)</option>
-              </select>
-              <span class="field-error" data-error-for="quantity"></span>
-            </label>
-            <label>
-              Leveringsadresse
-              <textarea
-                name="message"
-                id="field-message"
-                rows="3"
-                placeholder="Gateadresse, postnummer og sted"
-                required
-              ></textarea>
-              <span class="field-error" data-error-for="message"></span>
-            </label>
-            <p class="form-price-line" id="form-price-line">
-              Du Vippser <strong>449 kr</strong> (gratis frakt)
-            </p>
-            <p class="form-hint">
-              Vipps til <strong>97 10 58 79</strong> først. Pakken går ut når betalingen er mottatt.
-            </p>
-            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
-            <button type="submit" class="btn btn-primary btn-full">Send bestilling</button>
-          </form>
+          </div>
         </div>
       </section>
     </main>
@@ -422,6 +478,10 @@
     <div class="mobile-cta" id="mobile-cta">
       <a href="#kontakt" class="btn btn-primary btn-full">Bestill nå — fra 249 kr</a>
     </div>
+
+    <button type="button" class="scroll-top" id="scroll-top" aria-label="Til toppen">
+      ↑
+    </button>
 
     <footer class="footer">
       <div class="container footer-inner">

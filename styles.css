@@ -527,6 +527,42 @@ img {
   color: var(--text-muted);
 }
 
+/* Why Rootwell */
+.why {
+  background: var(--surface);
+  border-block: 1px solid var(--border);
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.15rem;
+}
+
+.why-card {
+  padding: 1.6rem;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.why-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+}
+
+.why-card h3 {
+  font-family: var(--display);
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.why-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
 /* Deals */
 .deals {
   background: var(--bg-deep);
@@ -1077,8 +1113,75 @@ img {
   color: #c0392b;
 }
 
+.form-panel {
+  position: relative;
+}
+
+.success-card {
+  padding: 1.75rem 1.5rem;
+  background: linear-gradient(160deg, rgba(47, 168, 102, 0.1), #fff 55%);
+  border: 1px solid rgba(31, 122, 77, 0.25);
+  border-radius: var(--radius-lg);
+  text-align: left;
+}
+
+.success-card[hidden] {
+  display: none !important;
+}
+
+.success-eyebrow {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.6rem;
+}
+
+.success-card h3 {
+  font-family: var(--display);
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.success-card p {
+  color: var(--text-muted);
+  margin-bottom: 1.25rem;
+}
+
 .mobile-cta {
   display: none;
+}
+
+.scroll-top {
+  position: fixed;
+  right: 1rem;
+  bottom: 1.25rem;
+  z-index: 85;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--text);
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(8px);
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.scroll-top.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.scroll-top:hover {
+  background: #fff;
+  border-color: rgba(31, 122, 77, 0.3);
 }
 
 .footer {
@@ -1130,6 +1233,7 @@ img {
 @media (max-width: 900px) {
   .trust-row,
   .variants-grid,
+  .why-grid,
   .deals-grid,
   .order-steps,
   .process-steps,
@@ -1322,6 +1426,11 @@ img {
 
   body.menu-open .mobile-cta {
     transform: translateY(110%);
+  }
+
+  .scroll-top {
+    bottom: 5.25rem;
+    right: 0.85rem;
   }
 
   .footer {
