@@ -1,0 +1,111 @@
+.main {
+  max-width: 36rem;
+  margin: 0 auto;
+  padding: 3rem 1.25rem 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.title {
+  margin: 0;
+  font-size: 2rem;
+  letter-spacing: -0.03em;
+}
+
+.muted {
+  margin: 0.35rem 0 0;
+  color: #5c6570;
+}
+
+.error {
+  margin: 0;
+  padding: 0.75rem 0.9rem;
+  border: 1px solid #f0c2c2;
+  background: #fff5f5;
+  color: #8a1f1f;
+}
+
+.form,
+.authForm {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.form {
+  flex-direction: row;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.input {
+  flex: 1;
+  min-width: 0;
+  padding: 0.7rem 0.8rem;
+  border: 1px solid #cfd6dd;
+  border-radius: 0.4rem;
+  font: inherit;
+}
+
+.button,
+.secondary {
+  border: 0;
+  border-radius: 0.4rem;
+  padding: 0.7rem 1rem;
+  font: inherit;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  background: #111;
+  color: #fff;
+}
+
+.secondary {
+  background: #eef1f4;
+  color: #111;
+}
+
+.actions {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.item {
+  padding: 0.85rem 1rem;
+  border: 1px solid #e4e8ec;
+  border-radius: 0.4rem;
+  background: #fafbfc;
+}
+
+.link {
+  color: #111;
+}
