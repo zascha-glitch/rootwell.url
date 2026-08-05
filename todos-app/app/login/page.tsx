@@ -1,11 +1,11 @@
 import Link from "next/link";
-import { signIn, signUp } from "@/app/auth/actions";
+import { sendMagicLink, signIn, signUp } from "@/app/auth/actions";
 import styles from "../page.module.css";
 
 export default async function LoginPage({
   searchParams,
 }: {
-  searchParams: Promise<{ error?: string }>;
+  searchParams: Promise<{ error?: string; info?: string }>;
 }) {
   const params = await searchParams;
 
@@ -13,10 +13,12 @@ export default async function LoginPage({
     <main className={styles.main}>
       <h1 className={styles.title}>Login</h1>
       <p className={styles.muted}>
-        Opprett bruker eller logg inn for å bruke todos.
+        Brukeren din er allerede opprettet hvis du har trykket «Opprett bruker»
+        før. Da er det «Logg inn» eller magisk lenke som gjelder.
       </p>
 
       {params.error && <p className={styles.error}>{params.error}</p>}
+      {params.info && <p className={styles.info}>{params.info}</p>}
 
       <form className={styles.authForm} action={signIn}>
         <label className={styles.label}>
@@ -27,6 +29,7 @@ export default async function LoginPage({
             type="email"
             required
             autoComplete="email"
+            defaultValue="anders.fjuk.p@gmail.com"
           />
         </label>
         <label className={styles.label}>
@@ -35,8 +38,8 @@ export default async function LoginPage({
             className={styles.input}
             name="password"
             type="password"
-            required
             minLength={6}
+            required
             autoComplete="current-password"
           />
         </label>
@@ -50,6 +53,14 @@ export default async function LoginPage({
             formAction={signUp}
           >
             Opprett bruker
+          </button>
+          <button
+            className={styles.secondary}
+            type="submit"
+            formAction={sendMagicLink}
+            formNoValidate
+          >
+            Send magisk lenke
           </button>
         </div>
       </form>
