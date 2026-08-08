@@ -774,9 +774,22 @@ img {
   margin-bottom: 0.35rem;
 }
 
+.vipps-iban {
+  font-size: clamp(1.05rem, 2.8vw, 1.45rem);
+  letter-spacing: 0.02em;
+  line-height: 1.35;
+  word-break: break-word;
+}
+
 .vipps-box-compact .vipps-number {
   font-size: 1.75rem;
   margin-bottom: 0;
+}
+
+.vipps-box-compact .vipps-iban {
+  font-size: clamp(0.95rem, 2.4vw, 1.15rem);
+  flex: 1;
+  min-width: 0;
 }
 
 .vipps-row {

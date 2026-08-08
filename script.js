@@ -1,27 +1,27 @@
 const FORMSPREE_ENDPOINT = "https://formspree.io/f/xvzeezwe";
-const VIPPS_NUMBER = "97105879";
+const WISE_IBAN = "GB36TRWI60486497185655";
 
 const DEALS = {
   1: {
     title: "Rootwell 4-i-1 · 1 sett",
     price: "249 kr",
-    vipps: "298 kr",
+    total: "298 kr",
     note: "+ 49 kr frakt",
-    line: "Du Vippser <strong>298 kr</strong> (249 + 49 frakt)",
+    line: "Du betaler <strong>298 kr</strong> via Wise (249 + 49 frakt)",
   },
   2: {
     title: "Rootwell 4-i-1 · 2 sett",
     price: "449 kr",
-    vipps: "449 kr",
+    total: "449 kr",
     note: "Gratis frakt",
-    line: "Du Vippser <strong>449 kr</strong> (gratis frakt)",
+    line: "Du betaler <strong>449 kr</strong> via Wise (gratis frakt)",
   },
   3: {
     title: "Rootwell 4-i-1 · 3 sett",
     price: "629 kr",
-    vipps: "629 kr",
+    total: "629 kr",
     note: "Gratis frakt",
-    line: "Du Vippser <strong>629 kr</strong> (gratis frakt)",
+    line: "Du betaler <strong>629 kr</strong> via Wise (gratis frakt)",
   },
 };
 
@@ -169,7 +169,7 @@ updateDealSummary();
 
 document.querySelectorAll("[data-copy]").forEach((btn) => {
   btn.addEventListener("click", async () => {
-    const value = btn.dataset.copy || VIPPS_NUMBER;
+    const value = btn.dataset.copy || WISE_IBAN;
     const original = btn.textContent;
 
     try {
