@@ -1,5 +1,5 @@
 const FORMSPREE_ENDPOINT = "https://formspree.io/f/xvzeezwe";
-const WISE_IBAN = "GB36TRWI60486497185655";
+const DNB_ACCOUNT = "12299109591";
 
 const DEALS = {
   1: {
@@ -7,21 +7,21 @@ const DEALS = {
     price: "249 kr",
     total: "298 kr",
     note: "+ 49 kr frakt",
-    line: "Du betaler <strong>298 kr</strong> via Wise (249 + 49 frakt)",
+    line: "Du betaler <strong>298 kr</strong> til DNB (249 + 49 frakt)",
   },
   2: {
     title: "Rootwell 4-i-1 · 2 sett",
     price: "449 kr",
     total: "449 kr",
-    note: "Gratis frakt",
-    line: "Du betaler <strong>449 kr</strong> via Wise (gratis frakt)",
+    note: "Mest valgt · Gratis frakt",
+    line: "Du betaler <strong>449 kr</strong> til DNB (gratis frakt)",
   },
   3: {
     title: "Rootwell 4-i-1 · 3 sett",
     price: "629 kr",
     total: "629 kr",
     note: "Gratis frakt",
-    line: "Du betaler <strong>629 kr</strong> via Wise (gratis frakt)",
+    line: "Du betaler <strong>629 kr</strong> til DNB (gratis frakt)",
   },
 };
 
@@ -169,7 +169,7 @@ updateDealSummary();
 
 document.querySelectorAll("[data-copy]").forEach((btn) => {
   btn.addEventListener("click", async () => {
-    const value = btn.dataset.copy || WISE_IBAN;
+    const value = btn.dataset.copy || DNB_ACCOUNT;
     const original = btn.textContent;
 
     try {

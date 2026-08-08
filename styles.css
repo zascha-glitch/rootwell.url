@@ -609,6 +609,49 @@ img {
   font-size: 0.95rem;
 }
 
+/* Testimonials */
+.testimonials {
+  background: var(--surface);
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.15rem;
+}
+
+.testimonial-card {
+  margin: 0;
+  padding: 1.5rem 1.4rem;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.testimonial-card blockquote {
+  margin: 0 0 1rem;
+  font-family: var(--display);
+  font-size: 1.05rem;
+  line-height: 1.45;
+  color: var(--text);
+}
+
+.testimonial-card figcaption {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.success-next {
+  margin: 0.75rem 0 1.1rem;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.success-copy {
+  margin-bottom: 0.75rem;
+}
+
 /* Deals */
 .deals {
   background: var(--bg-deep);
@@ -1294,6 +1337,7 @@ img {
   .variants-grid,
   .why-grid,
   .deals-grid,
+  .testimonials-grid,
   .order-steps,
   .process-steps,
   .faq-layout,
