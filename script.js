@@ -1,5 +1,5 @@
 const FORMSPREE_ENDPOINT = "https://formspree.io/f/xvzeezwe";
-const DNB_ACCOUNT = "12299109591";
+const DNB_IBAN = "NO7112299109591";
 
 const DEALS = {
   1: {
@@ -169,7 +169,7 @@ updateDealSummary();
 
 document.querySelectorAll("[data-copy]").forEach((btn) => {
   btn.addEventListener("click", async () => {
-    const value = btn.dataset.copy || DNB_ACCOUNT;
+    const value = btn.dataset.copy || DNB_IBAN;
     const original = btn.textContent;
 
     try {
