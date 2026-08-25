@@ -8,8 +8,9 @@ Nettside for Rootwell-produktet.
 |-----|-------|
 | **Prosjektmappe (Mac)** | `~/rootwell` |
 | **GitHub-repo** | https://github.com/zascha-glitch/rootwell.url |
-| **Nettside (når publisert)** | https://zascha-glitch.github.io/rootwell.url/ |
+| **Nettside** | https://rootwell.no/ |
 | **GitHub Pages-innstillinger** | https://github.com/zascha-glitch/rootwell.url/settings/pages |
+| **Gammel GitHub-adresse** | https://zascha-glitch.github.io/rootwell.url/ |
 
 Nettside-lenken er **reservert** til repoet ditt. Når du slår på GitHub Pages igjen, får du samme adresse tilbake.
 
