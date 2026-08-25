@@ -31,6 +31,10 @@ python3 -m http.server 8080
 
 Da får du e-post hver gang noen sender bestillingsskjemaet.
 
+## Betaling
+
+Kunder betaler med **Vipps** til spareboks **8274JQ**. Nummeret står i `index.html` og `script.js` — søk etter `8274JQ` for å oppdatere.
+
 ## Endre pris
 
 Prisen og tilbudene står i `index.html` — søk etter `249` for å oppdatere.

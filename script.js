@@ -1,5 +1,5 @@
 const FORMSPREE_ENDPOINT = "https://formspree.io/f/xvzeezwe";
-const DNB_IBAN = "NO7112299109591";
+const VIPPS_NUMBER = "8274JQ";
 
 const DEALS = {
   1: {
@@ -7,21 +7,21 @@ const DEALS = {
     price: "249 kr",
     total: "298 kr",
     note: "+ 49 kr frakt",
-    line: "Du betaler <strong>298 kr</strong> til DNB (249 + 49 frakt)",
+    line: "Du betaler <strong>298 kr</strong> med Vipps (249 + 49 frakt)",
   },
   2: {
     title: "Rootwell 4-i-1 · 2 sett",
     price: "449 kr",
     total: "449 kr",
     note: "Mest valgt · Gratis frakt",
-    line: "Du betaler <strong>449 kr</strong> til DNB (gratis frakt)",
+    line: "Du betaler <strong>449 kr</strong> med Vipps (gratis frakt)",
   },
   3: {
     title: "Rootwell 4-i-1 · 3 sett",
     price: "629 kr",
     total: "629 kr",
     note: "Gratis frakt",
-    line: "Du betaler <strong>629 kr</strong> til DNB (gratis frakt)",
+    line: "Du betaler <strong>629 kr</strong> med Vipps (gratis frakt)",
   },
 };
 
@@ -63,6 +63,7 @@ const mobileCta = document.getElementById("mobile-cta");
 const contactSection = document.getElementById("kontakt");
 const successCard = document.getElementById("success-card");
 const successReset = document.getElementById("success-reset");
+const successAmount = document.getElementById("success-amount");
 
 const updateDealSummary = (value = dealSelect?.value || "2") => {
   const deal = DEALS[value] || DEALS[2];
@@ -169,7 +170,7 @@ updateDealSummary();
 
 document.querySelectorAll("[data-copy]").forEach((btn) => {
   btn.addEventListener("click", async () => {
-    const value = btn.dataset.copy || DNB_IBAN;
+    const value = btn.dataset.copy || VIPPS_NUMBER;
     const original = btn.textContent;
 
     try {
@@ -221,6 +222,9 @@ form?.addEventListener("submit", async (e) => {
     });
 
     if (response.ok) {
+      const paidDeal = DEALS[form.quantity.value] || DEALS[2];
+      if (successAmount) successAmount.textContent = paidDeal.total;
+
       form.reset();
       if (dealSelect) dealSelect.value = "2";
       updateDealSummary("2");

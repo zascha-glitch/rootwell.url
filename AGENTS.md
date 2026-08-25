@@ -20,4 +20,4 @@ There is **no** package manifest, linter, test suite, or build step. Validate by
 
 - **Port 8080** may already be in use (another `python3 -m http.server`). Kill the existing listener or choose another port.
 - Form submissions go to **Formspree** (`FORMSPREE_ENDPOINT` in `script.js`). A successful submit shows the green status under the form; real emails are sent to the Formspree account owner — mark cloud-agent test orders clearly (e.g. name/address prefixed with `TEST`).
-- Orders assume **DNB bank transfer** outside the site; the form only collects delivery details.
+- Orders assume **Vipps** to spareboks `8274JQ` outside the site; the form only collects delivery details.
